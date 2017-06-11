@@ -9,6 +9,5 @@ data <- data %>% filter(Date=="2007-02-01" | Date=="2007-02-02") %>%
 
 plot(as.POSIXct(data$datetime), as.numeric(data$Global_active_power), 
      ylab="Global Active Power (kilowatts)", xlab="", type = "l")
-axis.Date(side = 1, at=c("Thu","Fri","Sat"),labels=T)
 dev.copy(png, filename="plot2.png", width=480, height=480)
 dev.off ()
